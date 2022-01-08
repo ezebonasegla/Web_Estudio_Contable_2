@@ -1,0 +1,313 @@
+$color-fondo: #f8f9fa;
+$color-importante: #152F4F;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $color-fondo;
+
+    font-size: 16px;
+}
+
+/* Nav y Header */
+
+nav img {
+    width: 7.5rem;
+    margin-left: 30px;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.sliderhome{
+    .carousel-inner {
+        height: 900px;
+    }
+    .carousel-caption {
+        height: 100%;
+        text-align: center;
+        padding-top: 9.5em;
+            p{
+                text-shadow: black 1px 1px 10px;
+                font-size: 1.875rem;
+            }
+            h1{
+                text-shadow: black 1px 1px 10px;
+                font-size: 2.875rem;
+            }
+    }
+    .carousel-item{
+        img {
+            filter: blur(3px);
+            opacity: 0.6;
+        }
+    } 
+}
+
+/* About Us */
+
+#aboutus-section {
+    padding: 90px 0;
+}
+
+.aboutus-title {
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 32px;
+    margin: 0 0 39px;
+    padding: 0 0 11px;
+    position: relative;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.aboutus-title::after {
+    background: $color-importante none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 54px;
+}
+
+.aboutus-text {
+    color: #606060;
+    font-size: 13px;
+    line-height: 22px;
+    margin: 0 0 35px;
+}
+
+a:hover,
+a:active {
+    color: $color-importante;
+    text-decoration: none;
+    outline: 0;
+}
+
+.aboutus-more {
+    border: 1px solid $color-importante;
+    border-radius: 25px;
+    color: $color-importante;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 7px 20px;
+    text-transform: uppercase;
+}
+
+.feature{
+    .feature-box{
+        padding-top: 30px;
+        padding-bottom: 30px;
+            .iconset{
+                img{
+                    float: left;
+                    position: relative;
+                    width: 18%; 
+                }
+            }
+            .feature-content{
+                float: left;
+                padding-left: 28px;
+                width: 78%;
+                    h4{
+                        color: #0f0f0f;
+                        font-size: 18px;
+                        letter-spacing: 0;
+                        line-height: 22px;
+                        margin: 0 0 5px;
+                    }
+                    p{
+                        color: #606060;
+                        font-size: 13px;
+                        line-height: 22px;
+                    }
+            }
+    }
+}
+
+.btn-info {
+    background-color: $color-importante;
+}
+
+/* Services */
+
+#services{
+    .services-top {
+        padding: 40px 0 50px;
+    }
+    .services-list {
+        padding-top: 50px;
+            .service-block {
+                margin-bottom: 15px;
+                    .ico {
+                        font-size: 38px;
+                        float: left;
+                    }
+                    .text-block {
+                        margin-left: 18px;
+                            .name {
+                                font-size: 20px;
+                                font-weight: 900;
+                                margin-bottom: 5px;
+                            }
+                            .info {
+                                font-size: 16px;
+                                font-weight: 300;
+                                margin-bottom: 10px;
+                            }
+                            .text {
+                                font-size: 12px;
+                                line-height: normal;
+                                font-weight: 300;
+                            }
+                    }
+                }
+    }
+    .secondh2 {
+        font-size: 60px;
+        line-height: 60px;
+        margin-bottom: 20px;
+        font-weight: 900;
+        color: $color-importante;
+    }
+}
+
+/* Links de Interes */
+
+#links_interes h2 {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    color: $color-importante;
+}
+
+.sliderlinks{
+    .col-md-3{
+        display: inline-block;
+        margin-left: -4px;
+        img {
+            width: 90%;
+            height: auto;
+            padding-bottom: 60px;
+        }
+    }
+    .carousel-item{
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+    .carousel-indicators{
+        li{
+            background-color: $color-importante;
+        }
+    }
+    .carousel-control-prev-icon{
+        background-color: $color-importante;
+    }
+    .carousel-control-next-icon{
+        background-color: $color-importante;
+    }
+}
+
+
+
+/* Contact Us */
+#contact-form {
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+    h3 {
+        font-size: 3.4375rem;
+        line-height: 3.75rem;
+        margin-bottom: 1.25rem;
+        font-weight: 900;
+        color: $color-importante;
+    }
+    .form-control {
+        border-radius: 1rem;
+    }
+    .contact-image {
+        text-align: center;
+        img {
+            width: 7.75em;
+            margin-top: -3%;
+        }
+    }
+    form {
+        padding: 14%;
+        .row {
+            margin-bottom: -7%;
+        }
+    }
+    .btnContact {
+        width: 50%;
+        border: none;
+        border-radius: 1rem;
+        padding: 1.5%;
+        background: $color-importante;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+/* Footer */
+.footer {
+    background: #152F4F;
+    color: white;
+    .links{
+        a {
+            color: white;
+            transition: color 0.2s;
+        }
+        a:hover {
+            text-decoration: none;
+            color: #4180CB;
+        }
+    }
+    .location{
+        a {
+            color: white;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #4180CB;
+        }
+    }
+    .copyright{
+        p {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+}
+
+.row2{
+    img {
+        width: 36px;
+        height: 36px;
+        margin-top: 10px;
+    }
+    label {
+        margin-top: 10px;
+        margin-left: 20px;
+        max-width: 140px;
+    }
+    a {
+        margin-top: 25px;
+        margin-left: 15px;
+        color: #C7C7C7;
+    }
+}
+
+
+
+
