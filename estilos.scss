@@ -1,12 +1,34 @@
-$color-fondo: #f8f9fa;
-$color-importante: #152F4F;
+$estilos: (
+    azul_oscuro: #152F4F,
+    blanco_leve: #f8f9fa,
+);
+
+@mixin tono($color) {
+    @if map-has-key($estilos, $color ){
+        color: map-get($estilos, $color);
+    }
+}
+
+@mixin fondo($color) {
+    @if map-has-key($estilos, $color ){
+        background-color: map-get($estilos, $color);
+    }
+}
+
+@mixin propiedades_title ( $font-size, $line-height, $margin-bottom, $font-weight) {
+    font-size: $font-size;
+    line-height: $line-height;
+    margin-bottom: $margin-bottom;
+    font-weight: $font-weight;
+}
+
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: $color-fondo;
+    @include fondo(blanco_leve);
 
     font-size: 16px;
 }
@@ -67,7 +89,7 @@ nav img {
 }
 
 .aboutus-title::after {
-    background: $color-importante none repeat scroll 0 0;
+    background: map-get($estilos , azul_oscuro) none repeat scroll 0 0;
     bottom: 0;
     content: "";
     height: 2px;
@@ -85,15 +107,15 @@ nav img {
 
 a:hover,
 a:active {
-    color: $color-importante;
+    @include tono(azul_oscuro);
     text-decoration: none;
     outline: 0;
 }
 
 .aboutus-more {
-    border: 1px solid $color-importante;
+    border: 1px solid map-get($estilos , azul_oscuro);
     border-radius: 25px;
-    color: $color-importante;
+    @include tono(azul_oscuro);
     display: inline-block;
     font-size: 14px;
     font-weight: 700;
@@ -134,7 +156,7 @@ a:active {
 }
 
 .btn-info {
-    background-color: $color-importante;
+    @include fondo(azul_oscuro);
 }
 
 /* Services */
@@ -172,22 +194,16 @@ a:active {
                 }
     }
     .secondh2 {
-        font-size: 60px;
-        line-height: 60px;
-        margin-bottom: 20px;
-        font-weight: 900;
-        color: $color-importante;
+        @include propiedades_title(60px, 60px, 20px, 900);
+        @include tono(azul_oscuro);
     }
 }
 
 /* Links de Interes */
 
 #links_interes h2 {
-    font-size: 50px;
-    line-height: 60px;
-    margin-bottom: 20px;
-    font-weight: 900;
-    color: $color-importante;
+    @include propiedades_title(50px, 60px, 20px, 900);
+    @include tono(azul_oscuro);
 }
 
 .sliderlinks{
@@ -206,14 +222,14 @@ a:active {
     }
     .carousel-indicators{
         li{
-            background-color: $color-importante;
+            @include fondo(azul_oscuro);
         }
     }
     .carousel-control-prev-icon{
-        background-color: $color-importante;
+        @include fondo(azul_oscuro);
     }
     .carousel-control-next-icon{
-        background-color: $color-importante;
+        @include fondo(azul_oscuro);
     }
 }
 
@@ -226,11 +242,8 @@ a:active {
     margin-bottom: 5%;
     width: 70%;
     h3 {
-        font-size: 3.4375rem;
-        line-height: 3.75rem;
-        margin-bottom: 1.25rem;
-        font-weight: 900;
-        color: $color-importante;
+        @include propiedades_title(3.4375rem, 3.75rem, 1.25rem, 900);
+        @include tono(azul_oscuro);
     }
     .form-control {
         border-radius: 1rem;
@@ -253,7 +266,7 @@ a:active {
         border: none;
         border-radius: 1rem;
         padding: 1.5%;
-        background: $color-importante;
+        @include fondo(azul_oscuro);
         font-weight: 600;
         color: #fff;
         cursor: pointer;
@@ -262,7 +275,7 @@ a:active {
 
 /* Footer */
 .footer {
-    background: #152F4F;
+    @include fondo(azul_oscuro);
     color: white;
     .links{
         a {

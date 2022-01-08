@@ -230,7 +230,7 @@ a:active {
   border: none;
   border-radius: 1rem;
   padding: 1.5%;
-  background: #152F4F;
+  background-color: #152F4F;
   font-weight: 600;
   color: #fff;
   cursor: pointer;
@@ -238,7 +238,7 @@ a:active {
 
 /* Footer */
 .footer {
-  background: #152F4F;
+  background-color: #152F4F;
   color: white;
 }
 .footer .links a {
