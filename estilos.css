@@ -4,6 +4,7 @@ html {
 
 body {
   background-color: #f8f9fa;
+  overflow-x: hidden;
   font-size: 16px;
 }
 
@@ -125,35 +126,34 @@ a:active {
 
 /* Services */
 #services .services-top {
-  padding: 40px 0 50px;
+  padding: 20px 0 30px;
 }
 #services .services-list {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 #services .services-list .service-block {
   margin-bottom: 15px;
 }
-#services .services-list .service-block .ico {
-  font-size: 38px;
-  float: left;
-}
 #services .services-list .service-block .text-block {
-  margin-left: 18px;
+  margin-left: 10px;
 }
 #services .services-list .service-block .text-block .name {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 900;
   margin-bottom: 5px;
+  text-align: center;
 }
 #services .services-list .service-block .text-block .info {
-  font-size: 16px;
+  font-size: 26px;
   font-weight: 300;
   margin-bottom: 10px;
+  text-align: center;
+  font-style: italic;
 }
 #services .services-list .service-block .text-block .text {
-  font-size: 12px;
-  line-height: normal;
+  font-size: 18px;
   font-weight: 300;
+  line-height: 2;
 }
 #services .secondh2 {
   font-size: 60px;
@@ -182,8 +182,8 @@ a:active {
   padding-bottom: 60px;
 }
 .sliderlinks .carousel-item {
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 9.375em;
+  padding-right: 9.375em;
 }
 .sliderlinks .carousel-indicators li {
   background-color: #152F4F;
@@ -200,12 +200,11 @@ a:active {
   background: #fff;
   margin-top: 10%;
   margin-bottom: 5%;
-  width: 70%;
 }
 #contact-form h3 {
-  font-size: 3.4375rem;
-  line-height: 3.75rem;
-  margin-bottom: 1.25rem;
+  font-size: 3.4375em;
+  line-height: 3.75em;
+  margin-bottom: 1.25em;
   font-weight: 900;
   color: #152F4F;
 }
@@ -220,7 +219,9 @@ a:active {
   margin-top: -3%;
 }
 #contact-form form {
-  padding: 14%;
+  padding-bottom: 14%;
+  padding-left: 14%;
+  padding-right: 14%;
 }
 #contact-form form .row {
   margin-bottom: -7%;
@@ -258,6 +259,21 @@ a:active {
 }
 .footer .copyright p {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .row2 img {
